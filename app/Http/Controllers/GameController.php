@@ -30,7 +30,9 @@ class GameController extends Controller
 
     public function show($id){
 
-        return view('games.show', ['id' => $id]);
+        $game = Game::findOrFail($id);
+
+        return view('games.show', ['game' => $game]);
     }
 
 
