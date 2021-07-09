@@ -20,8 +20,8 @@
         <img src="/img/1.png" alt="logo of the game" >
         <div class="title m-b-md">
             <strong> Gameing House </strong>
-          
         </div>
+        <a href="/games/create">BUY</a>
     </div>
 </div>
 @endsection
