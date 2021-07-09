@@ -4,6 +4,7 @@
 <div class="wrapper create-games">
     <h1> ORDER THE NEW GAME</h1>
     <form action="/games" method="POST">
+        @csrf
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name">
 
@@ -12,7 +13,7 @@
                 <option value="action"> Action </option>
                 <option value="horror"> Horror </option>
                 <option value="rpg"> RPG </option>  
-                <option value="kids">Ultra-HD</option>    
+                <option value="kids">For Kids</option>    
             </select>
         <label for="quality">Choose game quality:</label>
             <select name="quality" id="quality">
