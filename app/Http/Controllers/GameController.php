@@ -19,12 +19,19 @@ class GameController extends Controller
         // $games = Game::all();
         $games = Game::orderBy('genre','desc')->get();
        
-        return view('games',['games'=>$games]);
+        return view('games.index',['games'=>$games]);
     
+    }
+
+    public function create(){
+        
+        return view('games.create');
     }
 
     public function show($id){
 
-        return view('details', ['id' => $id]);
+        return view('games.show', ['id' => $id]);
     }
+
+
 }

@@ -21,5 +21,7 @@ Route::get('/', function () {
 // Route::get('games',[GameController::class,'index'])->name('games');
 // Route::get('games/{id}',[GamesController::class,'show']);
 Route::get('/games', 'GameController@index');
+Route::get('/games/create','GameController@create');
+
 Route::get('/games/{id}', 'GameController@show');
 
