@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    use HasFactory;     
+    use HasFactory;    
+    protected $fillable = ['name', 'genre', 'quality', 'offer'];
+    
+    protected $casts = [
+        'offer' => 'array'
+    ];
 }

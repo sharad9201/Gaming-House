@@ -34,18 +34,20 @@ class GameController extends Controller
 
         return view('games.show', ['game' => $game]);
     }
-    public function store(){
+    public function store(Request $request){
         // error_log(request('name'));
         // error_log(request('genre'));
         // error_log(request('quality'));
 
-        $game = new Game();
+        // $game = new Game();
         
-        $game->name = request('name');
-        $game->genre = request('genre');
-        $game->quality = request('quality');
+        // $game->name = request('name');
+        // $game->genre = request('genre');
+        // $game->quality = request('quality');
+        // $game->offer = request('offer');
 
-        $game->save();
+        // $game->save();
+        Game::create($request->all());
         return redirect('/')->with('message','Thanks for the purchase');
 
     }

@@ -25,8 +25,9 @@
               <span> - last in the loop</span>
             @endif --}}
 
+            {{ $game->genre }} - {{ $game->quality}} 
 
-            {{ $game->genre }} - {{ $game->quality}} - ${{ $game->price}}
+            {{-- {{ $game->genre }} - {{ $game->quality}} - ${{ $game->price}} --}}
           </div>
         @endforeach
 
