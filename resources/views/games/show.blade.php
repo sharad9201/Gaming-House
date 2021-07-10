@@ -15,6 +15,12 @@
            <li>{{ $offer }}</li>
         @endforeach
     </ul>
+    <form action="/games/{{$game->id}}" method="POST">
+        @csrf 
+        @method('DELETE')
+        <button> Complete Order</button>
+
+    </form>
 
     {{-- <p class="price"> Price - ${{ $game->price}}</p> --}}
 </div>

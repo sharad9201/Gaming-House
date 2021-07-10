@@ -52,5 +52,11 @@ class GameController extends Controller
 
     }
 
+    public function destroy($id){
+        $game = Game::findorFail($id);
+        $game->delete();
+
+        return redirect('/games');
+    }
 
 }

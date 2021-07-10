@@ -25,7 +25,7 @@
               <span> - last in the loop</span>
             @endif --}}
 
-            {{ $game->genre }} - {{ $game->quality}} 
+            <a href="/games/{{$game->id}}">{{ $game->name }} </a>
 
             {{-- {{ $game->genre }} - {{ $game->quality}} - ${{ $game->price}} --}}
           </div>

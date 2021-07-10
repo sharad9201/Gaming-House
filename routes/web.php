@@ -24,4 +24,5 @@ Route::get('/games', 'GameController@index');
 Route::get('/games/create','GameController@create');
 Route::post('/games','GameController@store');
 Route::get('/games/{id}', 'GameController@show');
+Route::delete('/games/{id}','GameController@destroy');
 
