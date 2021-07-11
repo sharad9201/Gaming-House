@@ -26,3 +26,7 @@ Route::post('/games','GameController@store');
 Route::get('/games/{id}', 'GameController@show');
 Route::delete('/games/{id}','GameController@destroy');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
