@@ -22,7 +22,7 @@
             <strong> Gameing House </strong>
         </div>
         <p class="message">{{ session('message')}}</p>
-        <a href="/games/create">BUY</a>
+        <a href="{{route('games.create')}}">BUY</a>
     </div>
 </div>
 @endsection

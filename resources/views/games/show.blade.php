@@ -15,7 +15,8 @@
            <li>{{ $offer }}</li>
         @endforeach
     </ul>
-    <form action="/games/{{$game->id}}" method="POST">
+    {{-- <form action="/games/{{$game->id}}" method="POST"> --}}
+        <form action="{{ route('games.destroy', $game->id)}}" method="POST">
         @csrf 
         @method('DELETE')
         <button> Complete Order</button>

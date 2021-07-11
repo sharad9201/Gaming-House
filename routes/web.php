@@ -20,13 +20,15 @@ Route::get('/', function () {
 
 // Route::get('games',[GameController::class,'index'])->name('games');
 // Route::get('games/{id}',[GamesController::class,'show']);
-Route::get('/games', 'GameController@index')->middleware('auth');
-Route::get('/games/create','GameController@create');
-Route::post('/games','GameController@store');
-Route::get('/games/{id}', 'GameController@show')->middleware('auth');
-Route::delete('/games/{id}','GameController@destroy')->middleware('auth');
+Route::get('/games', 'GameController@index')->name('games.index')->middleware('auth');
+Route::get('/games/create','GameController@create')->name('games.create');
+Route::post('/games','GameController@store')->name('games.store');
+Route::get('/games/{id}', 'GameController@show')->name('games.show')->middleware('auth');
+Route::delete('/games/{id}','GameController@destroy')->name('games.destroy')->middleware('auth');
 
 
-Auth::routes();
+Auth::routes([
+    'register'=>false
+]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

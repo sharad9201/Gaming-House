@@ -9,11 +9,11 @@
         
         <!-- @for($i = 0; $i < 5; $i++)
           <p>the value of i is {{ $i }}</p>
-        @endfor -->
+               @endfor -->
 
-        <!-- @for($i = 0; $i < count($games); $i++)
+         <!-- @for($i = 0; $i < count($games); $i++)
           <p>{{ $games[$i]['genre'] }}</p>
-        @endfor -->
+          @endfor -->
 
         @foreach($games as $game)
           <div>
