@@ -20,11 +20,11 @@ Route::get('/', function () {
 
 // Route::get('games',[GameController::class,'index'])->name('games');
 // Route::get('games/{id}',[GamesController::class,'show']);
-Route::get('/games', 'GameController@index');
+Route::get('/games', 'GameController@index')->middleware('auth');
 Route::get('/games/create','GameController@create');
 Route::post('/games','GameController@store');
-Route::get('/games/{id}', 'GameController@show');
-Route::delete('/games/{id}','GameController@destroy');
+Route::get('/games/{id}', 'GameController@show')->middleware('auth');
+Route::delete('/games/{id}','GameController@destroy')->middleware('auth');
 
 
 Auth::routes();
